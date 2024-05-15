@@ -5,7 +5,7 @@ import pandas as pd
 def get_soup(url):
     response = requests.get(url)
     html = response.text
-    return BeautifulSoup(html, 'html.parser')
+    return BeautifulSoup(html, 'lxml')
 
 def get_content_by_tag(tag):
     elements = soup.find_all(tag)
